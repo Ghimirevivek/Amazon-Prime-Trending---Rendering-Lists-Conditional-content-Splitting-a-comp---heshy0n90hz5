@@ -1,4 +1,4 @@
-const slides = [
+export const slides = [
     {
       title: "Today's workout plan",
       text: "We're gonna do 3 fundamental exercises.",
@@ -21,4 +21,3 @@ const slides = [
     },
   ];
 
-  export default slides;
