@@ -1,10 +1,9 @@
-import React, {Component,useState } from "react";
-import '../styles/App.css';
+import React, { useState } from "react";
+import "../styles/App.css";
 import { slides } from "../data";
 
 const App = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const currentSlide = slides[currentSlideIndex];
   const isFirstSlide = currentSlideIndex === 0;
   const isLastSlide = currentSlideIndex === slides.length - 1;
 
@@ -22,8 +21,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 data-testid="title">{currentSlide.title}</h1>
-      <p data-testid="text">{currentSlide.text}</p>
+      <h1 data-testid="title">{slides[currentSlideIndex].title}</h1>
+      <p data-testid="text">{slides[currentSlideIndex].text}</p>
       <button
         data-testid="button-prev"
         disabled={isFirstSlide}
